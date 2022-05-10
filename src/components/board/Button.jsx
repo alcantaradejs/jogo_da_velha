@@ -15,7 +15,7 @@ export function Button({value, set, playersTurn}) {
     } 
 
     return (
-        <button onClick={move} className="w-32 h-32 text-5xl font-mono font-bold border-solid border-4 border-gray-800 rounded">
+        <button onClick={move} className="w-32 h-32 text-8xl font-mono font-bold border-solid border-4 border-zinc-800 rounded">
             {value}
         </button>
     )
