@@ -1,14 +1,14 @@
 import { useState } from "react"
 
-export function Button({value, set, playersTurn}) {
+export function Button({value, set, game: { playersTurn, playerWin, playerWiner }}) {
     const [wasUsed, setWasUsed] = useState(false)
 
     function move() {
         if (!wasUsed) {  
             const [playersTurnValue, setPlayersTurn] = playersTurn
 
-            set(playersTurnValue == 0 ? "X" : "O" )
-            setPlayersTurn( playersTurnValue == 0 ? 1 : 0 )
+            set(playersTurnValue)
+            setPlayersTurn( playersTurnValue == "X" ? "O" : "X" )
 
             setWasUsed(true)
         }
